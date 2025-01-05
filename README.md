@@ -1,6 +1,6 @@
 ## Spatial-Texture Hybrid MRI Model &mdash; Official PyTorch Implementation
 
-![Python 3.7](https://img.shields.io/badge/python-3.7-green.svg?style=plastic) ![PyTorch 1.5.1](https://img.shields.io/badge/pytorch-1.5.1-green.svg?style=plastic) ![License MIT](https://img.shields.io/github/license/zhangzjn/APB2Face)
+![Python 3.10](https://img.shields.io/badge/python-3.10-green.svg?style=plastic) ![PyTorch 2.5.1](https://img.shields.io/badge/pytorch-2.5.1-green.svg?style=plastic) ![License MIT](https://img.shields.io/github/license/zhangzjn/APB2Face)
 
 Official pytorch implementation of the paper "Spatial-Texture Hybrid MRI Model for Orbital Lymphoma Typing".
 ## What is STHM-Model
@@ -10,7 +10,7 @@ Unlike other regions of the human body, the anatomical structure and positional 
 
 ### Requirements
 
-This code has been developed under `Python3.7`, `PyTorch 1.5.1` and `CUDA 10.1` on `Windows/Ubantu`. 
+This code has been developed under `Python3.10`, `PyTorch 2.5.1` and `CUDA 11.8` on `Windows/Ubantu`. 
 
 
 ```shell
