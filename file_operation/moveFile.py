@@ -42,10 +42,10 @@ def get_MRI_unzip():
     zip_path = r'C:\Users\perlicue\Desktop\spacial_feature\multi_seq_train\zip_path'
     workbook = xlrd.open_workbook(excel)
     table = workbook.sheet_by_name('sheet1')
-    f = xlwt.Workbook(encoding='utf-8', style_compression=0)  # 新建一个excel
-    sheet = f.add_sheet('sheet1')  # 新建一个sheet
+    f = xlwt.Workbook(encoding='utf-8', style_compression=0)
+    sheet = f.add_sheet('sheet1')
 
-    # 通过nrows和ncols获取到表格中数据的行数和列数
+
     rows = table.nrows
     cols = table.ncols
     for index in range(0, rows):

@@ -10,16 +10,16 @@ def rename():
         fileList.sort()
         n = 0
         for file in fileList:
-                # 设置旧文件名（就是路径+文件名）
+
                 print(file)
-                oldname1 = path + os.sep + file  # os.sep添加系统分隔符
-                # oldname2 = label + os.sep + file  # os.sep添加系统分隔符
+                oldname1 = path + os.sep + file
+
                 code = "lymphoma_%03.0d" % int(file.split(".")[0])
                 # code = "%d" % n
                 newname1 = path + os.sep + code + "_0000.nii.gz"
                 # newname2 = label + os.sep + code + ".nii.gz"
                 # os.rename(newname1, oldname1)
-                os.rename(oldname1, newname1)  # 用os模块中的rename方法对文件改名
+                os.rename(oldname1, newname1)
                 # os.rename(oldname2, newname2)
                 print(oldname1, '======>', newname1)
                 n += 1
@@ -32,16 +32,16 @@ def rename_dcm(path):
                 n = 0
                 files = os.listdir(sublist)
                 for file in files:
-                        # 设置旧文件名（就是路径+文件名）
+
                         print(file)
-                        oldname1 = sublist + os.sep + file # os.sep添加系统分隔符
-                        # oldname2 = label + os.sep + file  # os.sep添加系统分隔符
+                        oldname1 = sublist + os.sep + file
+
                         # code = "lymphoma_%03.0d" % int(file.split(".")[0])
                         code = "%d" % n
                         newname1 = sublist + os.sep + code + ".dcm"
                         # newname2 = label + os.sep + code + ".nii.gz"
                         # os.rename(newname1, oldname1)
-                        os.rename(oldname1, newname1)  # 用os模块中的rename方法对文件改名
+                        os.rename(oldname1, newname1)
                         # os.rename(oldname2, newname2)
                         print(oldname1, '======>', newname1)
                         n += 1

@@ -1,22 +1,12 @@
 import random
 
-import pandas as pd
-from sklearn import datasets
-from sklearn import svm
 import joblib
-from sklearn import preprocessing
 import numpy as np
+from sklearn import svm
 from sklearn.metrics import confusion_matrix, classification_report
-
-from calculation import LE
-import numpy as np
-import matplotlib.pyplot as plt
-from sklearn import datasets
-from sklearn.datasets import make_moons, make_circles, make_classification
-from sklearn.preprocessing import StandardScaler
 from sklearn.model_selection import GridSearchCV
-from sklearn.svm import SVC
 from sklearn.model_selection import train_test_split
+from sklearn.svm import SVC
 
 from calculation.utils.util import cal_score
 
@@ -43,8 +33,6 @@ def loadDataSet(filename):
 
 def save_model(clf, filename='filename.pkl'):
     joblib.dump(clf, filename)
-
-# version = str("_11_glcm")
 
 
 def score(y, y_test):
@@ -110,12 +98,11 @@ def batch(ver):
         data, target = loadDataSet(file_path)
         X_train, X_test, y_train, y_test = train_test_split(data, target, test_size=.3, random_state=62)
         train(X_train, y_train, model_path)
-        # result = predict(X_test, y_test, model_path)
-        # get_ROC()
+
         print(file_path)
-        # print(y_test)
-        # print(result)
-        # print(cal_score(y_test, result))
+        print(y_test)
+        print(result)
+        print(cal_score(y_test, result))
         print(enough_test(data, target, 100, model_path))
 if __name__ == '__main__':
     # batch("_aug")
@@ -157,7 +144,6 @@ if __name__ == '__main__':
     # grid.fit(data, target)
     # a = pd.DataFrame(grid.cv_results_)
 
-    # 按照mean_test_score降序排列
     # a.sort(['mean_test_score'], ascending=False)
     # print("%s The best parameters are %s with a score of %0.2f" % (grid.best_estimator_, grid.best_params_, grid.best_score_))
     # print("predict: %s", grid.predict(data))

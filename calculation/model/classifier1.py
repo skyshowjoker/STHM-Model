@@ -1,15 +1,12 @@
-import os
 import random
 
-import xlwt
-from xgboost import XGBClassifier
-import numpy as np
 import joblib
-from sklearn.model_selection import train_test_split, GridSearchCV
 import matplotlib.pyplot as plt
-from sklearn.metrics import roc_curve, auc
-from sklearn.metrics import roc_auc_score
+import numpy as np
+import xlwt
 from sklearn import metrics
+from sklearn.model_selection import train_test_split, GridSearchCV
+from xgboost import XGBClassifier
 
 from calculation.utils.util import cal_score
 
