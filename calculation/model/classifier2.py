@@ -56,7 +56,7 @@ def train(data, target, save_path):
     clf.fit(data, target)
     save_model(clf, save_path)
 
-def predict(data, target, path):
+def predict(data, path):
     clf = joblib.load(path)
     re = clf.predict(data)
     return re
@@ -69,7 +69,7 @@ def enough_test(data, target, n, model_path):
         random_num = random.randint(0, 1000)
         X_train, X_test, y_train, y_test = train_test_split(data, target, test_size=.3, random_state=random_num)
         train(X_train, y_train, model_path)
-        result = predict(X_test, y_test, model_path)
+        result = predict(X_test, model_path)
         acc[i], P[i], R[i] = cal_score(y_test, result)
     return np.mean(acc), np.mean(P), np.mean(R), np.std(acc), np.std(P), np.std(R)
 
@@ -92,7 +92,7 @@ def batch(ver):
         #     data, target = loadDataSet(file_path)
         #     X_train, X_test, y_train, y_test = train_test_split(data, target, test_size=.3, random_state=62)
         #     train(X_train, y_train, model_path)
-        #     result = predict(X_test, y_test, model_path)
+        #     result = predict(X_test, model_path)
         # except:
         #     continue
         data, target = loadDataSet(file_path)
@@ -114,7 +114,7 @@ if __name__ == '__main__':
 
 
     train(X_train, y_train, model_path)
-    result = predict(X_test, y_test, model_path)
+    result = predict(X_test, model_path)
     print(y_test)
     print(result)
     print(cal_score(y_test, result))
@@ -149,7 +149,7 @@ if __name__ == '__main__':
     # print("predict: %s", grid.predict(data))
 
     # train(data, target, model_path)
-    # result = predict(data, target, model_path)
+    # result = predict(data, model_path)
     # print(result)
 
 
