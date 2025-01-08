@@ -36,7 +36,7 @@ pip3 install -r requirements.txt
 2. Test prediction model.
 
    ```shell
-   nnUNetv2_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -d DATASET_NAME_OR_ID -c CONFIGURATION --save_probabilities
+   nnUNet_predict -i INPUT_FOLDER -o OUTPUT_FOLDER -d DATASET_NAME_OR_ID -c CONFIGURATION --save_probabilities
    ```
 
 ### Classification model
